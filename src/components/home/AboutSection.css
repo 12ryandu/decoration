@@ -1,0 +1,43 @@
+.about {
+    padding: 80px 40px;
+    text-align: center;
+    background: var(--page-home-about-bg);
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.about-card {
+    background: var(--page-home-about-card-bg);
+    padding: 30px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px var(--page-home-about-card-shadow);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 14px;
+    color: var(--page-home-about-text-secondary);
+}

@@ -1,0 +1,77 @@
+.list-page {
+    background: #fff;
+    color: #222;
+}
+
+.list-page__container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.list-hero {
+    min-height: 320px;
+    background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("https://via.placeholder.com/1600x500?text=Category+Banner") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.list-hero__overlay {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    color: #fff;
+}
+
+.list-hero__eyebrow {
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.list-hero h1 {
+    margin: 0 0 16px;
+    font-size: 48px;
+}
+
+.list-hero__desc {
+    max-width: 680px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 32px 0 48px;
+}
+
+.list-seo {
+    padding: 64px 0;
+    background: #f7f7f7;
+}
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .list-hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 640px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .list-hero {
+        min-height: 240px;
+    }
+
+    .list-hero h1 {
+        font-size: 30px;
+    }
+}

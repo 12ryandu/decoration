@@ -1,0 +1,26 @@
+export const layoutThemeMock = {
+    colors: {
+        headerBg: "transparent",
+        headerScrolledBg: "#fff7cc",
+        headerShadow: "rgba(255, 212, 0, 0.18)",
+        headerLogo: "#2b2100",
+        headerLink: "#2b2100",
+        headerLinkHover: "#c79a00",
+
+        footerBg: "#2b2100",
+        footerText: "#fff7cc",
+        footerHeading: "#fffbe8",
+        footerTextMuted: "rgba(255, 247, 204, 0.78)",
+        footerTextSoft: "rgba(255, 247, 204, 0.72)",
+        footerDivider: "rgba(255, 247, 204, 0.18)",
+        footerInputBg: "#3a2f00",
+        footerInputText: "#fffbe8",
+        footerInputBorder: "rgba(255, 247, 204, 0.22)",
+        footerInputPlaceholder: "rgba(255, 247, 204, 0.45)",
+        footerButtonBg: "#ffd400",
+        footerButtonText: "#2b2100",
+        footerLink: "rgba(255, 247, 204, 0.78)",
+        footerLinkHover: "#fffbe8",
+        footerCopyright: "rgba(255, 247, 204, 0.58)",
+    },
+};

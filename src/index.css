@@ -1,0 +1,33 @@
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #f2f2f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+          radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.06), transparent 32%),
+          radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.04), transparent 28%),
+          linear-gradient(135deg, #1e1f23 0%, #2b2d33 45%, #1a1b1f 100%);
+  background-size: 120% 120%;
+  background-attachment: fixed;
+  animation: breathingBg 12s ease-in-out infinite;
+}
+
+@keyframes breathingBg {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1.04);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+}
