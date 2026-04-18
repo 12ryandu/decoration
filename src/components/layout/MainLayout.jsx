@@ -1,6 +1,9 @@
+// src/layout/MainLayout.jsx
+
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop"; // ← 新增
 import { layoutThemeMock } from "../../data/mock/layoutThemeMock";
 
 export default function MainLayout() {
@@ -31,6 +34,7 @@ export default function MainLayout() {
 
     return (
         <div style={layoutVars}>
+            <ScrollToTop /> {/* ← 新增，放在最顶部 */}
             <Header />
             <Outlet />
             <Footer />

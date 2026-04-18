@@ -12,28 +12,21 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainLayout />,
         children: [
-            {
-                index: true,
-                element: <Home />,
-            },
+            { index: true, element: <Home /> },
             {
                 path: "products",
-                element: <List />,
+                element: <List />,          // /products → 全部
             },
             {
-                path: "product/:slug",
-                element: <Detail />,
+                path: "products/:category",
+                element: <List />,          // /products/christmas-hats → 分类筛选
             },
             {
-                path: "gallery",
-                element: <Gallery />,
+                path: "products/:category/:slug",
+                element: <Detail />,        // /products/christmas-hats/xxx → 详情
             },
-            {
-                path: "test",
-                element: <Test />,
-            },
+            { path: "gallery", element: <Gallery /> },
         ],
     },
 ]);
-
 export default router;

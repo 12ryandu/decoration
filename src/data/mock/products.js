@@ -1,7 +1,10 @@
+// src/data/mock/products.js
+
 export const products = [
     // ===== Christmas Hats (4个) =====
     {
         id: 1,
+        slug: "classic-red-plush-santa-hat",
         name: "Classic Red Plush Santa Hat",
         category: "Christmas Hats",
         price: 3.99,
@@ -16,6 +19,7 @@ export const products = [
     },
     {
         id: 2,
+        slug: "kids-mini-santa-hat",
         name: "Kids Mini Santa Hat",
         category: "Christmas Hats",
         price: 2.49,
@@ -30,6 +34,7 @@ export const products = [
     },
     {
         id: 3,
+        slug: "luxury-velvet-santa-hat",
         name: "Luxury Velvet Santa Hat",
         category: "Christmas Hats",
         price: 7.99,
@@ -44,6 +49,7 @@ export const products = [
     },
     {
         id: 4,
+        slug: "led-light-up-santa-hat",
         name: "LED Light-Up Santa Hat",
         category: "Christmas Hats",
         price: 6.50,
@@ -60,6 +66,7 @@ export const products = [
     // ===== Santa Costumes (4个) =====
     {
         id: 5,
+        slug: "standard-santa-claus-costume-set",
         name: "Standard Santa Claus Costume Set",
         category: "Santa Costumes",
         price: 29.99,
@@ -74,6 +81,7 @@ export const products = [
     },
     {
         id: 6,
+        slug: "deluxe-faux-fur-santa-suit",
         name: "Deluxe Faux Fur Santa Suit",
         category: "Santa Costumes",
         price: 59.99,
@@ -88,6 +96,7 @@ export const products = [
     },
     {
         id: 7,
+        slug: "mrs-claus-costume",
         name: "Mrs. Claus Costume",
         category: "Santa Costumes",
         price: 34.99,
@@ -102,6 +111,7 @@ export const products = [
     },
     {
         id: 8,
+        slug: "kids-santa-costume",
         name: "Kids Santa Costume",
         category: "Santa Costumes",
         price: 19.99,
@@ -118,6 +128,7 @@ export const products = [
     // ===== Tree Skirts (3个) =====
     {
         id: 9,
+        slug: "classic-red-felt-tree-skirt-48in",
         name: "Classic Red Felt Tree Skirt 48in",
         category: "Tree Skirts",
         price: 12.99,
@@ -132,6 +143,7 @@ export const products = [
     },
     {
         id: 10,
+        slug: "faux-fur-white-tree-skirt-36in",
         name: "Faux Fur White Tree Skirt 36in",
         category: "Tree Skirts",
         price: 18.99,
@@ -146,6 +158,7 @@ export const products = [
     },
     {
         id: 11,
+        slug: "burlap-rustic-tree-skirt",
         name: "Burlap Rustic Tree Skirt",
         category: "Tree Skirts",
         price: 9.99,
@@ -162,6 +175,7 @@ export const products = [
     // ===== Table Decoration (3个) =====
     {
         id: 12,
+        slug: "christmas-centerpiece-candle-holder-set",
         name: "Christmas Centerpiece Candle Holder Set",
         category: "Table Decoration",
         price: 14.99,
@@ -176,6 +190,7 @@ export const products = [
     },
     {
         id: 13,
+        slug: "knitted-table-runner-72in",
         name: "Knitted Table Runner 72in",
         category: "Table Decoration",
         price: 11.99,
@@ -190,6 +205,7 @@ export const products = [
     },
     {
         id: 14,
+        slug: "mini-christmas-village-scene-set",
         name: "Mini Christmas Village Scene Set",
         category: "Table Decoration",
         price: 24.99,
@@ -206,6 +222,7 @@ export const products = [
     // ===== Chair Covers (3个) =====
     {
         id: 15,
+        slug: "santa-chair-cover-standard",
         name: "Santa Chair Cover Standard",
         category: "Chair Covers",
         price: 8.99,
@@ -220,6 +237,7 @@ export const products = [
     },
     {
         id: 16,
+        slug: "plush-reindeer-chair-cover",
         name: "Plush Reindeer Chair Cover",
         category: "Chair Covers",
         price: 11.99,
@@ -234,6 +252,7 @@ export const products = [
     },
     {
         id: 17,
+        slug: "red-velvet-banquet-chair-cover",
         name: "Red Velvet Banquet Chair Cover",
         category: "Chair Covers",
         price: 15.99,
@@ -250,6 +269,7 @@ export const products = [
     // ===== Gift Packaging (3个) =====
     {
         id: 18,
+        slug: "christmas-gift-box-set-12pcs",
         name: "Christmas Gift Box Set (12pcs)",
         category: "Gift Packaging",
         price: 16.99,
@@ -264,6 +284,7 @@ export const products = [
     },
     {
         id: 19,
+        slug: "kraft-paper-gift-bags-50pcs",
         name: "Kraft Paper Gift Bags (50pcs)",
         category: "Gift Packaging",
         price: 13.99,
@@ -278,6 +299,7 @@ export const products = [
     },
     {
         id: 20,
+        slug: "luxury-velvet-gift-pouch-set",
         name: "Luxury Velvet Gift Pouch Set",
         category: "Gift Packaging",
         price: 22.99,

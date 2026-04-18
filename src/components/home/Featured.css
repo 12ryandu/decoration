@@ -1,37 +1,114 @@
+/* src/pages/Featured.css */
+
 .featured {
-    padding: 80px 40px;
-    text-align: center;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 24px;
 }
 
 .featured h2 {
     font-size: 28px;
-    margin-bottom: 40px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 32px;
+    text-align: center;
 }
 
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
 }
 
-.product-card {
+.featured-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
     cursor: pointer;
     transition: all 0.3s ease;
+    background: #fff;
 }
 
-.product-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.product-card p {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-/* hover效果 */
-.product-card:hover {
+.featured-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px var(--page-home-featured-card-shadow);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-color: #c0392b;
+}
+
+.featured-card__image {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.featured-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover .featured-card__image img {
+    transform: scale(1.08);
+}
+
+.featured-card__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #c0392b;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.featured-card__content {
+    padding: 16px;
+}
+
+.featured-card__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 8px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.featured-card__price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #c0392b;
+    margin: 0 0 6px 0;
+}
+
+.featured-card__rating {
+    font-size: 13px;
+    color: #999;
+    margin: 0;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .featured h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
