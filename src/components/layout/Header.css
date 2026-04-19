@@ -37,3 +37,18 @@
 .nav a:hover {
     color: var(--page-home-header-link-hover);
 }
+
+.login-btn {
+    padding: 8px 20px;
+    border: 1px solid currentColor;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.login-btn:hover {
+    background: white;
+    color: black;
+}

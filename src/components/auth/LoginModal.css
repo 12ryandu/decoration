@@ -1,0 +1,312 @@
+/* ==================== CSS 变量定义 ==================== */
+:root {
+    --primary-color: #d4af37;
+    --primary-dark: #b8941f;
+    --bg-dark: #0a0e27;
+    --bg-darker: #050812;
+    --text-light: #e8e8e8;
+    --text-muted: #9ca3af;
+    --border-color: #2d3748;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================== 动画定义 ==================== */
+@keyframes overlayIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ==================== 覆盖层 ==================== */
+.login-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: overlayIn 0.3s ease-out;
+    backdrop-filter: blur(4px);
+}
+
+/* ==================== 弹窗容器 ==================== */
+.login-modal {
+    position: relative;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    max-height: 600px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    animation: modalIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+}
+
+/* ==================== 左侧面板 ==================== */
+.login-modal-left {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-modal-left::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.login-modal-left h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.login-modal-left p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+/* ==================== 右侧表单容器 ==================== */
+.login-modal-right {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ==================== 输入框样式 ==================== */
+.login-form-group {
+    margin-bottom: 24px;
+}
+
+.login-form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-form-input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-size: 14px;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.login-form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.login-form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.login-form-input.has-error {
+    border-color: var(--error-color);
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* ==================== 错误信息 ==================== */
+.login-form-error {
+    font-size: 12px;
+    color: var(--error-color);
+    margin-top: 6px;
+    display: none;
+}
+
+.login-form-error.show {
+    display: block;
+}
+
+/* ==================== 提交按钮 ==================== */
+.login-form-submit {
+    width: 100%;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.login-form-submit:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.login-form-submit:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.login-form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.login-form-submit.is-loading {
+    color: transparent;
+}
+
+.login-form-submit.is-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ==================== 关闭按钮 ==================== */
+.login-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 24px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.login-modal-close:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 680px) {
+    .login-modal {
+        max-width: 95%;
+        max-height: 90vh;
+        flex-direction: column;
+    }
+
+    .login-modal-left {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 40px 30px;
+        min-height: 200px;
+    }
+
+    .login-modal-left h1 {
+        font-size: 24px;
+    }
+
+    .login-modal-right {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-modal {
+        width: 98%;
+    }
+
+    .login-modal-left {
+        padding: 30px 20px;
+    }
+
+    .login-modal-right {
+        padding: 30px 20px;
+    }
+
+    .login-modal-left h1 {
+        font-size: 20px;
+    }
+
+    .login-form-group {
+        margin-bottom: 18px;
+    }
+}
